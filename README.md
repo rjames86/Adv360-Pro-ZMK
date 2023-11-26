@@ -1,5 +1,16 @@
 # Kinesis Advantage 360 Pro ZMK Config
 
+## Ryan's Notes
+
+To easily update the keymap.json file without having to do it manually, you can use the following regex/replace from the adv360.keymap file
+
+    (&.+?)(?=&|\n|$) # regex pattern
+    "$1",  # replace with this
+
+After it's been replaced, the last comma will need to be removed
+
+
+
 ## Modifying the keymap
 
 [The ZMK documentation](https://zmk.dev/docs) covers both basic and advanced functionality and has a table of OS compatibility for keycodes. Please note that the RGB Underglow, Backlight and Power Management sections are not relevant to the Advantage 360 Pro's custom ZMK fork. For more information see [this note](#note)
